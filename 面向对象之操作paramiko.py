@@ -32,8 +32,8 @@ class Handle_paramiko(object):
                 par.sftp.mkdir(dir)
 
     def sftp_client(self):
-        trans = paramiko.Transport(self.hostname, self.port)
         try:
+            trans = paramiko.Transport(self.hostname, self.port)
             # print(self.username, self.password)
             trans.connect(username=self.username, password=self.password)
             # trans.connect(username='zhang', password='123456')
